@@ -19,8 +19,9 @@ int is_printable(char c)
  * @buffer: Array of chars.
  * @i: index at which appending start
  * @ascii_code: ascii code
- * return: Always 3
+ * Return: Always 3
  */
+
 int append_hexa_code(char ascii_code, char buffer[], int i)
 {
 	char map_to[] = "0123456789ABCDEF";
@@ -36,11 +37,13 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
 
 	return (3);
 }
+
 /**
  * is_digit - checks if the char is a digit
  * @c: the char
  * Return: 1 if c is digit, 0 if not.
  */
+
 int is_digit(char c)
 {
 	if (c >= '0' && c <= '9')
@@ -48,12 +51,15 @@ int is_digit(char c)
 	else
 		return (0);
 }
+
 /**
  * convert_size_number - casts a number to specefied size
  * @num: number to be casted
  * @size: the integer value representing the type to be casted
- * return: casted value of num
+ * Return: casted value of num
+ *
  */
+
 long int convert_size_number(long int num, int size)
 {
 	if (size == S_LONG)
@@ -62,12 +68,14 @@ long int convert_size_number(long int num, int size)
 		return ((short)num);
 	return ((int)num);
 }
+
 /**
  * convert_size_unsgnd - casts a number to specefic size
  * @num: nuber to be casted
  * @size: the integer that indicates the type of the casted.
- * return: num
+ * Return: Casted value of num
  */
+
 long int convert_size_unsgnd(unsigned long int num, int size)
 {
 	if (size == S_LONG)
@@ -77,4 +85,3 @@ long int convert_size_unsgnd(unsigned long int num, int size)
 
 	return ((unsigned int)num);
 }
-

@@ -20,28 +20,28 @@
 #define S_SHORT 1
 
 /**
- * struct spm - Struct
+ * struct fmt - Struct
  *
- * @spm: The format specefier.
- * @f: The function that points to handling print.
+ * @fmt: The format specefier.
+ * @fn: The function that points to handling print.
  */
-struct spm
+struct fmt
 {
-	char spm;
-	int (*f)(va_list, char[], int, int, int, int);
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 
 /**
- * typedef struct spm spm_t - Struct
+ * typedef struct fmt fmt_t - Struct
  *
- * @spm: The format specefier.
- * @f: The function that points to handling print f.
+ * @fmt: The format specefier.
+ * @fn: The function that points to handling print f.
  */
-typedef struct spm spm_t;
+typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
-int handle_print(const char *spm, int *i,
+int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /*declaring functions*/
